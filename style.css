@@ -1,8 +1,5 @@
-* {
-    box-sizing: border-box;
-}
-
 main {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -41,7 +38,7 @@ body {
 
 .parent {
     margin: 0 auto;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 

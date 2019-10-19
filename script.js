@@ -1,6 +1,7 @@
 window.onload = function() {
+
 const api_key = "SZTkBwjQYYYVremZV8DUaaETiwKktzF2";
-const url = "https://api.giphy.com/v1/gifs/random?api_key=SZTkBwjQYYYVremZV8DUaaETiwKktzF2&tag=&rating=G";
+const url = "https://api.giphy.com/v1/gifs/random?api_key="+api_key+"&tag=&rating=G";
 
 fetch(url)
     .then(res => {
@@ -18,9 +19,9 @@ fetch(url)
         console.log("Something went wrong...", err)
     })
 
-const nextButton = document.getElementById("next");
+const next = document.querySelector("#next");
 
-nextButton.addEventListener("click", (evt) => {
+next.addEventListener("click", (evt) => {
     evt.preventDefault();
     fetch(url)
         .then(res => {
