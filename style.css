@@ -5,6 +5,17 @@ main {
     justify-content: center;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("images/bridge\ background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* HEADER STYLES */
 header {
     display: flex;
     flex-direction: row;
@@ -26,22 +37,18 @@ header {
     margin-left: 1vw;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url("images/bridge\ background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
 
+
+/* API IMAGE DISPLAY */
+
+/* This contains the giphy generated images */
 .parent {
     margin: 0 auto;
     width: 100%;
     height: auto;
 }
 
+/* This manages the size and appearance of the generated images */
 .giphy {
     display: block;
     width: 50vw;
@@ -52,6 +59,11 @@ body {
     background-position: center;
 }
 
+
+
+/* BUTTON STYLES */
+
+/* Button Container */
 .buttons {
     display: flex;
     flex-direction: row;
@@ -62,6 +74,7 @@ body {
     width: auto;
 }
 
+/* Button Styler */
 .button {
     margin: 15vh 1vw 6vh 0.2vw;
     text-align: center;
@@ -76,15 +89,27 @@ body {
     width: 25vmin;
     cursor: pointer;
     box-shadow: 0.1vh 0.1vw 0.1vh rgb(0, 0, 220),
-                0.1vh 0.2vw 0.1vh rgb(0, 0, 220),
-                0.1vh 0.3vw 0.1vh rgb(0, 0, 220),
-                0.1vh 0.4vw 0.1vh rgb(0, 0, 220),
+                0.1vh 0.2vw 0.1vh rgb(0, 0, 220),     /*| This gives the buttons    |*/
+                0.1vh 0.3vw 0.1vh rgb(0, 0, 220),     /*| a 3D appearance by adding |*/
+                0.1vh 0.4vw 0.1vh rgb(0, 0, 220),     /*| layers of shadows         |*/
                 0.1vh 0.5vw 0.1vh rgb(0, 0, 220),
                 0.1vh 0.9vw 0.6vh rgba(160, 160, 160, 0.3),
                 0.1vh 1.1vw 0.8vh rgba(160, 160, 160, 0.1),                 
                 0.1vh 1.3vw 1.0vh rgba(160, 160, 160, 0.3)
 }
 
+/* This gives the buttons a round edge on their outer corners */
+#pre { border-top-left-radius: 50vh; border-bottom-left-radius: 50vh; }
+#next { border-top-right-radius: 50vh; border-bottom-right-radius: 50vh; }
+
+/* This prevents the highlight around the buttons after you click them */
+.button:focus { outline: none; }
+
+
+
+/* BUTTON ANIMATIONS */
+
+/* When clicked, the buttons will appear to be pressed */
 .button:active {
     box-shadow: 0.1vh 0.1vw 0.1vh rgb(0, 0, 220),
                 0.1vh 0.2vw 0.1vh rgb(0, 0, 220),
@@ -94,12 +119,14 @@ body {
     transform: translateY(0.3vh);
 }
 
+/* Initial position of letters before hovering */
 .button span {
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
 
+/* Makes a left-pointing arrow icon appear to the left of the 'PREVIOUS' letters */
 .button .previous:before {
     content: "\00ab";
     position: absolute;
@@ -109,6 +136,7 @@ body {
     transition: 0.5s;
 }
 
+/* Makes a right-pointing arrow icon appear to the right of the 'NEXT' letters */
 .button .next:after {
     content: "\00bb";
     position: absolute;
@@ -118,34 +146,24 @@ body {
     transition: 0.5s;
 }
 
+/* Animates 'PREVIOUS' letters to shift to the right */
 .button:hover .previous {
     padding-left: 25px;
 }
 
+/* Animates 'NEXT' letters to shift to the left */
 .button:hover .next {
     padding-right: 25px;
 }
 
+/* Makes arrow icon appear and shifts 'PREVIOUS' letters to the right after hovering */
 .button:hover .previous:before {
     opacity: 1;
     left: 0;
 }
 
+/* Makes arrow icon appear and shifts 'NEXT' letters to the left after hovering */
 .button:hover .next:after {
     opacity: 1;
     right: 0;
-}
-
-#pre {
-    border-top-left-radius: 50vh;
-    border-bottom-left-radius: 50vh;
-}
-
-#next {
-    border-top-right-radius: 50vh;
-    border-bottom-right-radius: 50vh;
-}
-
-.button:focus {
-    outline: none;
 }
