@@ -73,6 +73,7 @@ header {
 
 /* This manages the size and appearance of the generated images */
 .giphy3 {
+    margin: 0;
     display: none;
 }
 
