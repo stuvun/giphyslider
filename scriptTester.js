@@ -1,34 +1,32 @@
 window.onload = function() {
 
-const giphy1 = document.querySelector(".giphy1");
-const giphy2 = document.querySelector(".giphy2");
-const giphy3 = document.querySelector(".giphy3");
-
 class Fetch {
-    constructor(giphys, api_key, url) {
-        this.giphys = [giphy1, giphy2, giphy3];
+    constructor() {
+        this.giphys = document.querySelectorAll(".slider");
         this.api_key = "SZTkBwjQYYYVremZV8DUaaETiwKktzF2";
-        this.url = "https://api.giphy.com/v1/gifs/random?api_key="+api_key+"&tag=&rating=G";
+        this.url = "https://api.giphy.com/v1/gifs/random?api_key="+this.api_key+"&tag=&rating=G";
     }
 
-    fetchGiphy() {
-
+    fetchGiphys() {
+        for (let i = 0; this.giphys.length < 3; i++) {
+            fetch(this.url)
+                .then(res => {
+                    return res.json()
+                })
+                .then(res => {
+                    console.log("Success!", res);
+                    console.log(res.data.image_original_url);
+                    const imgUrl = res.data.image_original_url;
+                    const styles = "background-image: url("+imgUrl+");";
+                    this.giphys[i].style = styles
+                })
+                .catch(err => {
+                    console.log("Something went wrong...", err)
+                })
+        }
     }
 }
-function fetcher(giphy1, giphy2, giphy3) {
-    fetch(url)
-            .then(res => {
-                return res.json()
-            })
-            .then(res => {
-                console.log("Success!", res);
-                console.log(res.data.image_original_url);
-                const imgUrl = res.data.image_original_url;
-                const styles = "background-image: url("+imgUrl+");";
-                giphy1.style = styles
-            })
-            .catch(err => {
-                console.log("Something went wrong...", err)
-            })
-}
+Fetch = new Fetch;
+
+Fetch.fetchGiphys();
 }
