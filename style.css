@@ -51,7 +51,7 @@ header {
 
 /* This contains the giphy generated images */
 .parent3 {
-    margin: 0 auto;
+    margin: -100vw auto;
     width: 100vw;
     height: auto;
 }
@@ -64,7 +64,7 @@ header {
 
 .parent2 {
     margin: 0 auto;
-    width: 100vw;
+    width: 0vw;
     height: auto;
 }
 
