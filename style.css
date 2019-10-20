@@ -1,8 +1,10 @@
-main {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body {
@@ -45,38 +47,45 @@ header {
 .slider {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin: 0 auto;
+    align-items: center;
+    width: 100vw;
+    margin: 0 -1vw;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* This contains the giphy generated images */
 .parent3 {
-    margin: 0vw auto;
-    width: 0vw;
-    height: auto;
+    margin: 0;
+    display: none;
 }
 
 .parent1 {
-    margin: 0 auto;
+    margin: 0;
     width: 100vw;
     height: auto;
 }
 
 .parent2 {
-    margin: 0 auto;
-    width: 0vw;
-    height: auto;
+    margin: 0;
+    display: none;
 }
 
 /* This manages the size and appearance of the generated images */
-.giphy1, .giphy2, .giphy3 {
+.giphy3 {
+    display: none;
+}
+
+.giphy1 {
     display: block;
     width: 50vw;
     height: 50vh;
     margin: 0 auto;
-    background-size: stretch;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-size: auto;
+}
+
+.giphy2 {
+    display: none;
 }
 
 /* BUTTON STYLES */
