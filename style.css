@@ -39,8 +39,6 @@ header {
     margin-left: 1vw;
 }
 
-
-
 /* API IMAGE DISPLAY */
 
 /* Container for parents */
@@ -66,8 +64,6 @@ header {
     background-repeat: no-repeat;
     background-position: center;
 }
-
-
 
 /* BUTTON STYLES */
 
@@ -112,8 +108,6 @@ header {
 
 /* This prevents the highlight around the buttons after you click them */
 .button:focus { outline: none; }
-
-
 
 /* BUTTON ANIMATIONS */
 
