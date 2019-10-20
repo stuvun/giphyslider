@@ -27,11 +27,13 @@ header {
     font-weight: bold;
 }
 
+/* Cropped Logo Image */
 .giphyLogo {
     max-height: 10.5vh;
     margin-right: 1vw;
 }
 
+/* Cropped Letter Image */
 .giphyLetters {
     max-height: 7vh;
     margin-left: 1vw;
@@ -41,6 +43,12 @@ header {
 
 /* API IMAGE DISPLAY */
 
+/* Container for parents */
+.slider {
+    display: flex;
+    flex-direction: row;
+}
+
 /* This contains the giphy generated images */
 .parent1 {
     margin: 0 auto;
@@ -49,7 +57,7 @@ header {
 }
 
 /* This manages the size and appearance of the generated images */
-.giphy1 {
+.giphy1, .giphy2, .giphy3 {
     display: block;
     width: 50vw;
     height: 50vh;
