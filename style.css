@@ -42,14 +42,14 @@ header {
 /* API IMAGE DISPLAY */
 
 /* This contains the giphy generated images */
-.parent {
+.parent1 {
     margin: 0 auto;
     width: 100%;
     height: auto;
 }
 
 /* This manages the size and appearance of the generated images */
-.giphy {
+.giphy1 {
     display: block;
     width: 50vw;
     height: 50vh;
