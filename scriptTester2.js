@@ -15,8 +15,11 @@ window.onload = function() {
             console.log(res.data.image_original_url);
     
             let imgUrl = res.data.image_original_url;
-            let styles = "background-image: url("+imgUrl+");";
-            giphys[0].style = styles;
+            let show = "background-image: url("+imgUrl+"); visibility: visible;";
+            let hide = "background-image: url("+imgUrl+"); visibility: hidden;";
+
+            giphys[0].style = show;
+            giphys[1].style = hide;
         })
         .catch(err => {
             console.log("Something went wrong...", err)
@@ -25,6 +28,7 @@ window.onload = function() {
     // <-- 'PREVIOUS' button
     buttons[0].addEventListener("click", (evt) => {
         evt.preventDefault();
+        
         fetch(url)
             .then(res => {
                 return res.json()
@@ -33,26 +37,14 @@ window.onload = function() {
                 console.log("Success!", res)
                 console.log(res.data.image_original_url);
                 let imgUrl = res.data.image_original_url;
-                let styles = "background-image: url("+imgUrl+");";
-                
-                // The div ending on the right will change its image url and hide | The middle div will show
-                // Original order should be [2, 0, 1] --> [1, 2, 0] (after click)
-                if (giphys[2].style.visibility == "hidden" && giphys[1].style.visibility == "hidden") {
-                    giphys[0].style = styles;
-                    giphys[0].style.visibility = "hidden";
-                    giphys[2].style.visibility = "visible";
-                }
-                // [1, 2, 0] --> [0, 1, 2]
-                else if (giphys[1].style.visibility == "hidden" && giphys[0].style.visibility == "hidden") {
-                    giphys[2].style = styles;
-                    giphys[2].style.visibility = "hidden";
-                    giphys[1].style.visibility = "visible"
-                }
-                // [0, 1, 2] --> [2, 0, 1] (Back to origin)
-                else if (giphys[0].style.visibility == "hidden" && giphys[2].style.visibility == "hidden") {
-                    giphys[1].style = styles;
-                    giphys[1].style.visibility = "hidden";
-                    giphys[0].style.visibility = "visible"
+                let show = "background-image: url("+imgUrl+"); visibility: visible;";
+                let hide = "background-image: url("+imgUrl+"); visibility: hidden;";
+
+                if (giphys[0].style == show) {
+                    giphys[0].style = hide;
+                    giphys[1].style = show
+                } else if (giphys[1].style == show) {
+                    giphys[1].style = hide;
                 }
             })
             .catch(err => {
@@ -97,4 +89,4 @@ window.onload = function() {
                 console.log("Something went wrong...", err)
             })
     })
-    }
+}
