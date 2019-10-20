@@ -14,16 +14,22 @@ for (let i = 0; i < 3; i++) {
         .then(res => {
             console.log("Success!", res);
             console.log(res.data.image_original_url);
-            const imgUrl = res.data.image_original_url;
-            const styles = "background-image: url("+imgUrl+");";
-            giphys[i].style = styles;
-            if (i === 0) { giphys[0].style.visibility = "visible" }
-            else {giphys[1].style.visibility = "hidden"; giphys[2].style.visibility = "hidden"}
+            
+            for (let i = 0; i < 3; i++) {
+                this.fetch(url)
+                .then(res => {
+                var imgUrl = res.data.image_original_url;
+                let styles = "background-image: url("+imgUrl+");";
+                giphys[i].style = styles;
+                if (i === 0) { giphys[0].style.visibility = "visible" }
+                else if (i === 1) {giphys[1].style.visibility = "hidden"}
+                else if (i === 2) {giphys[2].style.visibility = "hidden"}
+                })
+            }
         })
         .catch(err => {
             console.log("Something went wrong...", err)
         })
-}
 
 // <-- 'PREVIOUS' button
 buttons[0].addEventListener("click", (evt) => {
@@ -100,4 +106,5 @@ buttons[1].addEventListener("click", (evt) => {
             console.log("Something went wrong...", err)
         })
 })
+}
 }
