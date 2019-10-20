@@ -45,12 +45,26 @@ header {
 .slider {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 /* This contains the giphy generated images */
+.parent3 {
+    margin: 0 auto;
+    width: 100vw;
+    height: auto;
+}
+
 .parent1 {
     margin: 0 auto;
-    width: 100%;
+    width: 100vw;
+    height: auto;
+}
+
+.parent2 {
+    margin: 0 auto;
+    width: 100vw;
     height: auto;
 }
 
