@@ -24,9 +24,12 @@ header {
     align-items: center;
     justify-content: center;
     margin: 3vh auto;
+    margin-right: auto;
     font-family: 'Righteous', cursive;
     font-size: 9.1vh;
     font-weight: bold;
+    width: auto;
+    height: auto;
 }
 
 /* Cropped Logo Image */
@@ -46,43 +49,82 @@ header {
 /* Container for parents */
 .slider {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 80vh;
     width: 100vw;
-    margin: 0 -1vw;
-    background-repeat: no-repeat;
-    background-position: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 /* This contains the giphy generated images */
 .parent1 {
-    margin: 0;
+    height: 50vh;
     width: 100vw;
-    height: auto;
 }
 
-.parent2 {
-    margin: 0;
+/* .parent2 {
+    position: relative;
+    right: -200vw;
     width: 100vw;
-    visibility: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
+.parent3 {
+    position: relative;
+    left: -200vw;
+    width: 100vw;
+    overflow-x: auto;
+    overflow-y: hidden; */
 /* This manages the size and appearance of the generated images */
-.giphy1 {
-    display: block;
+.giphy {
     width: 50vw;
     height: 50vh;
+    /* background-image: url("https://media0.giphy.com/media/J5jiSSrEkV3Kd8iOwb/giphy.gif?cid=723f602a5a3cf907296fe12f18158aa67ddc8c277957bc2b&rid=giphy.gif"); */
+    background-position: center;
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
     margin: 0 auto;
-    background-size: auto;
 }
 
-.giphy2 {
-    display: block;
+.image {
+    width: 50vw;
+    height: 50vh;
+    background-image: url("https://media0.giphy.com/media/J5jiSSrEkV3Kd8iOwb/giphy.gif?cid=723f602a5a3cf907296fe12f18158aa67ddc8c277957bc2b&rid=giphy.gif");
+    background-position: center;
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0 auto;
+}
+/* .giphy2 {
     width: 50vw;
     height: 50vh;
     margin: 0 auto;
-    background-size: auto;
+    background-image: url("https://media0.giphy.com/media/J5jiSSrEkV3Kd8iOwb/giphy.gif?cid=723f602a5a3cf907296fe12f18158aa67ddc8c277957bc2b&rid=giphy.gif");
+    background-position: center;
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
+
+.giphy3 {
+    width: 50vw;
+    height: 50vh;
+    margin: 0 auto;
+    background-image: url("https://media0.giphy.com/media/J5jiSSrEkV3Kd8iOwb/giphy.gif?cid=723f602a5a3cf907296fe12f18158aa67ddc8c277957bc2b&rid=giphy.gif");
+    background-position: center;
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    overflow-x: auto;
+    overflow-y: hidden;
+} */
 
 /* BUTTON STYLES */
 

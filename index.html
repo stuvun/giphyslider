@@ -7,18 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Document</title>
+    <title>Trending Giphys</title>
 
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Baumans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script src="scriptTester2.js"></script>
-
     <header>
         <img class="giphyLogo" src="images/giphy logo.png">
             <span style= "color: orange" class="letter">R</span>
@@ -29,15 +23,19 @@
             <span style= "color: rgb(231, 231, 0)" class="letter">M</span>
         <img class="giphyLetters" src="images/giphy letters.png">'s
     </header>
+
     <div class="slider">
-        <div class="parent1"><div class="giphy1"></div></div>
-        <div class="parent2"><div class="giphy2"></div></div>
+        <!-- <div class="parent3"><div class="giphy3" id="gif3" style="background-image: url('https://media0.giphy.com/media/J5jiSSrEkV3Kd8iOwb/giphy.gif?cid=723f602a5a3cf907296fe12f18158aa67ddc8c277957bc2b&rid=giphy.gif');"></div></div> -->
+        <div class="parent1"><div class="giphy" id="gif1"><img class="image" src=""></div></div>
+        <!-- <div class="parent2"><div class="giphy2" id="gif2"></div></div> -->
+
+        <div class="buttons">
+            <button class="button" style="vertical-align: middle" id="pre"><span class="previous">PREVIOUS</span></button>
+            <button class="button" style="vertical-align: middle" id="next"><span class="next">NEXT</span></button>
+        </div>
     </div>
 
-    <div class="buttons">
-        <button class="button" style="vertical-align: middle" id="pre"><span class="previous">PREVIOUS</span></button>
-        <button class="button" style="vertical-align: middle" id="next"><span class="next">NEXT</span></button>
-    </div>
+    <script src="scriptTester3.js"></script>
 </body>
 </html>
 
