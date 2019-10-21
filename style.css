@@ -64,25 +64,10 @@ header {
     width: 100vw;
 }
 
-/* .parent2 {
-    position: relative;
-    right: -200vw;
-    width: 100vw;
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-
-.parent3 {
-    position: relative;
-    left: -200vw;
-    width: 100vw;
-    overflow-x: auto;
-    overflow-y: hidden; */
 /* This manages the size and appearance of the generated images */
 .giphy {
     width: 50vw;
     height: 50vh;
-    /* background-image: url("https://media0.giphy.com/media/J5jiSSrEkV3Kd8iOwb/giphy.gif?cid=723f602a5a3cf907296fe12f18158aa67ddc8c277957bc2b&rid=giphy.gif"); */
     background-position: center;
     background-size: auto auto;
     background-repeat: no-repeat;
@@ -102,29 +87,6 @@ header {
     overflow-y: hidden;
     margin: 0 auto;
 }
-/* .giphy2 {
-    width: 50vw;
-    height: 50vh;
-    margin: 0 auto;
-    background-image: url("https://media0.giphy.com/media/J5jiSSrEkV3Kd8iOwb/giphy.gif?cid=723f602a5a3cf907296fe12f18158aa67ddc8c277957bc2b&rid=giphy.gif");
-    background-position: center;
-    background-size: auto auto;
-    background-repeat: no-repeat;
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-
-.giphy3 {
-    width: 50vw;
-    height: 50vh;
-    margin: 0 auto;
-    background-image: url("https://media0.giphy.com/media/J5jiSSrEkV3Kd8iOwb/giphy.gif?cid=723f602a5a3cf907296fe12f18158aa67ddc8c277957bc2b&rid=giphy.gif");
-    background-position: center;
-    background-size: auto auto;
-    background-repeat: no-repeat;
-    overflow-x: auto;
-    overflow-y: hidden;
-} */
 
 /* BUTTON STYLES */
 

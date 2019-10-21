@@ -1,47 +1,56 @@
-window.onload = function() {
+var a = 0;
+
+const buttons = document.querySelectorAll(".button");
+
+const giphy = document.querySelector(".image")
 
 const api_key = "SZTkBwjQYYYVremZV8DUaaETiwKktzF2";
-const url = "https://api.giphy.com/v1/gifs/random?api_key="+api_key+"&tag=&rating=G";
+const url = "https://api.giphy.com/v1/gifs/trending?api_key="+api_key+"&limit=100&rating=G";
 
-const giphy1 = document.querySelector(".giphy1");
-const giphy2 = document.querySelector(".giphy2");
-const giphy3 = document.querySelector(".giphy3");
+buttons[0].style.visibility = "hidden";
 
-function parent1() {
-    fetch(url)
-        .then(res => {
-            return res.json()
-        })
-        .then(res => {
-            console.log("Success!", res);
-            console.log(res.data.image_original_url);
-            const imgUrl = res.data.image_original_url;
-            const styles = "background-image: url("+imgUrl+");";
-            giphy1.style = styles
-        })
-        .catch(err => {
-            console.log("Something went wrong...", err)
-        })
-}
-parent1();
+fetch(url)
+    .then(res => {
+        return res.json()
+    })
+    .then(res => {
+        console.log("Success!", res);
 
-const next = document.querySelector("#next");
+        console.log(res.data[0].images.downsized_large.url);
 
-next.addEventListener("click", (evt) => {
-    evt.preventDefault();
-    fetch(url)
-        .then(res => {
-            return res.json()
+        giphy.src = res.data[0].images.downsized_large.url;
+
+        buttons[1].addEventListener("click", function(evt) {
+            evt.preventDefault();
+
+            a = a + 1;
+            console.log(a);
+
+            giphy.src = "null;"
+            giphy.src = res.data[a].images.downsized_large.url;
+            console.log(res.data[a].images.downsized_large.url);
+
+            if (buttons[0].style.visibility == "hidden") { 
+                buttons[0].style.visibility = "null;";
+                buttons[0].style.visibility = "visible"
+            } else { return buttons[0].style.visibility }
         })
-        .then(res => {
-            console.log("Success!", res)
-            console.log(res.data.image_original_url);
-            const imgUrl = res.data.image_original_url;
-            const styles = "background-image: url("+imgUrl+");";
-            giphy1.style = styles;
+    
+        buttons[0].addEventListener("click", function(evt) {
+            evt.preventDefault();
+
+            if (a == 1) {
+                a = a - 1;
+                buttons[0].style.visibility = "null;";
+                buttons[0].style.visibility = "hidden";
+                console.log(a)
+            } else { a = a - 1; console.log(a) }
+
+            giphy.src = "null;"
+            giphy.src = res.data[a].images.downsized_large.url;
+            console.log(res.data[a].images.downsized_large.url);
         })
-        .catch(err => {
-            console.log("Something went wrong...", err)
-        })
-})
-}
+    })
+    .catch(err => {
+        console.log("Something went wrong...", err)
+    })
