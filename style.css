@@ -1,18 +1,15 @@
-html, body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    box-sizing: border-box;
-}
-
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(200, 200, 210);
+    max-width: 100vw;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: rgb(232, 240, 255);
+    background-image: url('./images/giphyBackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 /* HEADER STYLES */
@@ -21,10 +18,9 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 3vh auto;
-    margin-right: auto;
+    margin: 2vw 0;
     font-family: 'Righteous', cursive;
-    font-size: 9.1vh;
+    font-size: 4.5vw;
     font-weight: bold;
     width: auto;
     height: auto;
@@ -32,13 +28,13 @@ header {
 
 /* Cropped Logo Image */
 .giphyLogo {
-    max-height: 10.5vh;
+    width: 4vw;
     margin-right: 1vw;
 }
 
 /* Cropped Letter Image */
 .giphyLetters {
-    max-height: 7vh;
+    width: 15vw;
     margin-left: 1vw;
 }
 
