@@ -22,6 +22,9 @@ fetch(url)
             console.log(res.data[a].images.downsized_large.url)
         })
         giphySwitchMinus = () => {
+            if (a === 0) {
+                a = 1
+            }
             a = a - 1;
             giphy.forEach(gif => {
                 gif.style = "null;";
@@ -35,7 +38,9 @@ fetch(url)
                 giphyContainer.style = 'transform: translateX(2);';
                 currentSlide = currentSlide - 1
             }
-            giphyContainer.style = 'transform: translateX(1);';
+            setTimeout(transitionSlide = () => {
+                giphyContainer.style = 'transform: translateX(1);'
+            }, 300);
         }
         giphySwitchPlus = () => {
             if (a < -1) {
@@ -54,7 +59,9 @@ fetch(url)
                 giphyContainer.style = 'transform: translateX(0);';
                 currentSlide = currentSlide + 1
             }
-            giphyContainer.style = 'transform: translateX(1);';
+            setTimeout(transitionSlide = () => {
+                giphyContainer.style = 'transform: translateX(1);'
+            }, 300);
             if (buttons[0].style.visibility == "hidden") { 
                 buttons[0].style.visibility = "null;";
                 buttons[0].style.visibility = "visible"
