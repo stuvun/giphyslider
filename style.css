@@ -11,10 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url("images/bridge\ background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: rgb(200, 200, 210);
 }
 
 /* HEADER STYLES */
@@ -58,15 +55,17 @@ header {
     overflow-y: hidden;
 }
 
-/* This contains the giphy generated images */
-.parent1 {
-    height: 50vh;
-    width: 100vw;
+.giphyGallery {
+    margin: 0;
+    padding: 0;
 }
 
 /* This manages the size and appearance of the generated images */
 .giphy {
-    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
     height: 50vh;
     background-position: center;
     background-size: auto auto;
@@ -77,8 +76,6 @@ header {
 }
 
 .image {
-    width: 50vw;
-    height: 50vh;
     background-image: url("https://media0.giphy.com/media/J5jiSSrEkV3Kd8iOwb/giphy.gif?cid=723f602a5a3cf907296fe12f18158aa67ddc8c277957bc2b&rid=giphy.gif");
     background-position: center;
     background-size: auto auto;
@@ -115,11 +112,11 @@ header {
     background-color: rgb(0, 0, 255);
     width: 25vmin;
     cursor: pointer;
-    box-shadow: 0.1vh 0.1vw 0.1vh rgb(0, 0, 220),
-                0.1vh 0.2vw 0.1vh rgb(0, 0, 220),     /*| This gives the buttons    |*/
-                0.1vh 0.3vw 0.1vh rgb(0, 0, 220),     /*| a 3D appearance by adding |*/
-                0.1vh 0.4vw 0.1vh rgb(0, 0, 220),     /*| layers of shadows         |*/
-                0.1vh 0.5vw 0.1vh rgb(0, 0, 220),
+    box-shadow: 0.1vh 0.1vw 0.1vh rgb(0, 0, 150),
+                0.1vh 0.2vw 0.1vh rgb(0, 0, 150),     /*| This gives the buttons    |*/
+                0.1vh 0.3vw 0.1vh rgb(0, 0, 150),     /*| a 3D appearance by adding |*/
+                0.1vh 0.4vw 0.1vh rgb(0, 0, 150),     /*| layers of shadows         |*/
+                0.1vh 0.5vw 0.1vh rgb(0, 0, 150),
                 0.1vh 0.9vw 0.6vh rgba(160, 160, 160, 0.3),
                 0.1vh 1.1vw 0.8vh rgba(160, 160, 160, 0.1),                 
                 0.1vh 1.3vw 1.0vh rgba(160, 160, 160, 0.3)
@@ -136,8 +133,8 @@ header {
 
 /* When clicked, the buttons will appear to be pressed */
 .button:active {
-    box-shadow: 0.1vh 0.1vw 0.1vh rgb(0, 0, 220),
-                0.1vh 0.2vw 0.1vh rgb(0, 0, 220),
+    box-shadow: 0.1vh 0.1vw 0.1vh rgb(0, 0, 150),
+                0.1vh 0.2vw 0.1vh rgb(0, 0, 150),
                 0.1vh 0.9vw 0.6vh rgba(160, 160, 160, 0.3),
                 0.1vh 1.1vw 0.8vh rgba(160, 160, 160, 0.1),                 
                 0.1vh 1.3vw 1.0vh rgba(160, 160, 160, 0.3);
