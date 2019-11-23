@@ -1,6 +1,6 @@
 let a = 0;
 const buttons = document.querySelectorAll(".button");
-const giphyContainer = document.querySelectorAll(".giphyContainer");
+const giphyContainer = document.querySelector(".giphyGallery");
 const giphy = document.querySelectorAll(".image");
 
 const slideWidth = 100;
@@ -18,12 +18,18 @@ fetch(url)
     })
     .then(res => {
         console.log("Success!", res);
+        giphy.forEach((gif, index) => {
+            let gifPosition = a + index;
+            gif.style = "null;";
+            gif.style = "background-image: url('" + res.data[gifPosition].images.downsized_large.url + "');";
+            console.log(res.data[gifPosition].images.downsized_large.url)
+        })
         giphySwitchMinus = () => {
             let delta = currentSlide * slideWidth;
             giphy.forEach((gif, index) => {
                 let gifPosition = a + index;
-                gif.src = "null;";
-                gif.src = res.data[gifPosition].images.downsized_large.url;
+                gif.style = "null;";
+                gif.style = "background-image: url('" + res.data[gifPosition].images.downsized_large.url + "');";
                 console.log(res.data[gifPosition].images.downsized_large.url)
             })
             if (currentSlide < slideCount) {
@@ -38,8 +44,8 @@ fetch(url)
             let delta = currentSlide * slideWidth;
             giphy.forEach((gif, index) => {
                 let gifPosition = a + index;
-                gif.src = "null;";
-                gif.src = res.data[gifPosition].images.downsized_large.url;
+                gif.style = "null;";
+                gif.style = "background-image: url('" + res.data[gifPosition].images.downsized_large.url + "');";
                 console.log(res.data[gifPosition].images.downsized_large.url)
             })
             if (currentSlide < slideCount) {
