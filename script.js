@@ -32,14 +32,14 @@ fetch(url)
             })
             console.log(res.data[a].images.downsized_large.url)
             if (currentSlide === 1) {
-                giphyContainer.style = 'transform: translateX(2);';
+                giphyContainer.style = 'transform: translateX(0);';
                 currentSlide = 3
             } else {
-                giphyContainer.style = 'transform: translateX(2);';
+                giphyContainer.style = 'transform: translateX(0);';
                 currentSlide = currentSlide - 1
             }
             setTimeout(transitionSlide = () => {
-                giphyContainer.style = 'transform: translateX(1);'
+                giphyContainer.style = 'transition: none; transform: translateX(-100vw);'
             }, 300);
         }
         giphySwitchPlus = () => {
@@ -53,14 +53,14 @@ fetch(url)
             })
             console.log(res.data[a].images.downsized_large.url)
             if (currentSlide === 3) {
-                giphyContainer.style = 'transform: translateX(0);';
+                giphyContainer.style = 'transform: translateX(-200vw);';
                 currentSlide = 1
             } else {
-                giphyContainer.style = 'transform: translateX(0);';
+                giphyContainer.style = 'transform: translateX(-200vw);';
                 currentSlide = currentSlide + 1
             }
             setTimeout(transitionSlide = () => {
-                giphyContainer.style = 'transform: translateX(1);'
+                giphyContainer.style = 'transition: none; transform: translateX(-100vw);'
             }, 300);
             if (buttons[0].style.visibility == "hidden") { 
                 buttons[0].style.visibility = "null;";
