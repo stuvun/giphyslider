@@ -1,0 +1,1 @@
+# Giphy Slider UI Pattern
