@@ -2,7 +2,7 @@ const buttons = document.querySelectorAll(".button");
 const giphyContainer = document.querySelector(".giphyGallery");
 const giphy = document.querySelectorAll(".image");
 
-let a = 0;
+let a = 98;
 let currentSlide = 1;
 
 const api_key = "SZTkBwjQYYYVremZV8DUaaETiwKktzF2";
@@ -45,6 +45,8 @@ fetch(url)
         giphySwitchPlus = () => {
             if (a < -1) {
                 a = -1
+            } else if (a === 99) {
+                return
             }
             a = a + 1;
             giphy.forEach(gif => {
