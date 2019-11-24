@@ -46,7 +46,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    height: 80vh;
+    height: 40vw;
     width: 100vw;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -54,7 +54,7 @@ header {
 
 .galleryContainer {
     position: relative;
-    height: 50vh;
+    height: 25.5vw;
     width: 300vw;
     margin: 0 auto;
 }
@@ -69,11 +69,11 @@ header {
 
 .image {
     width: 100vw;
-    height: 50vh;
+    height: 25vw;
     list-style: none;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
 }
 
 /* BUTTON STYLES */
@@ -91,31 +91,31 @@ header {
 
 /* Button Styler */
 .button {
-    margin: 15vh 1vw 6vh 0.2vw;
+    margin: 6.5vw 1vw 3vw 0.2vw;
     text-align: center;
-    padding: 1vh 1vw;
+    padding: 0.5vw 1vw;
     border: 0px solid rgba(0, 0, 0, 0.301);
     font-family: 'Prompt', sans-serif;
-    font-size: 3vmin;
+    font-size: 1.5vw;
     font-weight: normal;
     text-shadow: 0px 0.125vw 0px rgba(255, 255, 255, 0.3), 0px -0.125vw 0px rgba(29, 29, 29, 0.7);
     color: white;
     background-color: rgb(0, 0, 255);
-    width: 25vmin;
+    width: 12vw;
     cursor: pointer;
-    box-shadow: 0.1vh 0.1vw 0.1vh rgb(0, 0, 150),
-                0.1vh 0.2vw 0.1vh rgb(0, 0, 150),     /*| This gives the buttons    |*/
-                0.1vh 0.3vw 0.1vh rgb(0, 0, 150),     /*| a 3D appearance by adding |*/
-                0.1vh 0.4vw 0.1vh rgb(0, 0, 150),     /*| layers of shadows         |*/
-                0.1vh 0.5vw 0.1vh rgb(0, 0, 150),
-                0.1vh 0.9vw 0.6vh rgba(160, 160, 160, 0.3),
-                0.1vh 1.1vw 0.8vh rgba(160, 160, 160, 0.1),                 
-                0.1vh 1.3vw 1.0vh rgba(160, 160, 160, 0.3)
+    box-shadow: 0.1vw 0.1vw 0.1vw rgb(15, 15, 115),
+                0.1vw 0.2vw 0.1vw rgb(15, 15, 115),     /*| This gives the buttons    |*/
+                0.1vw 0.3vw 0.1vw rgb(15, 15, 115),     /*| a 3D appearance by adding |*/
+                0.1vw 0.4vw 0.1vw rgb(15, 15, 115),     /*| layers of shadows         |*/
+                0.1vw 0.5vw 0.1vw rgb(15, 15, 115),
+                0.1vw 0.9vw 0.6vw rgba(160, 160, 160, 0.3),
+                0.1vw 1.1vw 0.8vw rgba(160, 160, 160, 0.1),                 
+                0.1vw 1.3vw 1.0vw rgba(160, 160, 160, 0.3)
 }
 
 /* This gives the buttons a round edge on their outer corners */
-#pre { border-top-left-radius: 50vh; border-bottom-left-radius: 50vh; }
-#next { border-top-right-radius: 50vh; border-bottom-right-radius: 50vh; }
+#pre { border-top-left-radius: 10vw; border-bottom-left-radius: 10vw; }
+#next { border-top-right-radius: 10vw; border-bottom-right-radius: 10vw; }
 
 /* This prevents the highlight around the buttons after you click them */
 .button:focus { outline: none; }
@@ -124,19 +124,16 @@ header {
 
 /* When clicked, the buttons will appear to be pressed */
 .button:active {
-    box-shadow: 0.1vh 0.1vw 0.1vh rgb(0, 0, 150),
-                0.1vh 0.2vw 0.1vh rgb(0, 0, 150),
-                0.1vh 0.9vw 0.6vh rgba(160, 160, 160, 0.3),
-                0.1vh 1.1vw 0.8vh rgba(160, 160, 160, 0.1),                 
-                0.1vh 1.3vw 1.0vh rgba(160, 160, 160, 0.3);
-    transform: translateY(0.3vh);
+    box-shadow: 0.1vw 0.1vw 0.1vw rgb(15, 15, 115),
+                0.1vw 0.2vw 0.1vw rgb(15, 15, 115);
+    transform: translateY(0.3vw);
 }
 
 /* Initial position of letters before hovering */
 .button span {
     display: inline-block;
     position: relative;
-    transition: 0.5s;
+    transition: 0.3s ease;
 }
 
 /* Makes a left-pointing arrow icon appear to the left of the 'PREVIOUS' letters */
@@ -145,8 +142,8 @@ header {
     position: absolute;
     opacity: 0;
     top: 0;
-    left: -20px;
-    transition: 0.5s;
+    left: -2vw;
+    transition: 0.3s ease;
 }
 
 /* Makes a right-pointing arrow icon appear to the right of the 'NEXT' letters */
@@ -155,18 +152,18 @@ header {
     position: absolute;
     opacity: 0;
     top: 0;
-    right: -20px;
-    transition: 0.5s;
+    right: -2vw;
+    transition: 0.3s ease;
 }
 
 /* Animates 'PREVIOUS' letters to shift to the right */
 .button:hover .previous {
-    padding-left: 25px;
+    padding-left: 2vw;
 }
 
 /* Animates 'NEXT' letters to shift to the left */
 .button:hover .next {
-    padding-right: 25px;
+    padding-right: 2vw;
 }
 
 /* Makes arrow icon appear and shifts 'PREVIOUS' letters to the right after hovering */
