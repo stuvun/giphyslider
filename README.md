@@ -54,7 +54,8 @@ I set the timer to 300 (milliseconds) because the transitions of the transformat
 ## Technologies Used
 
 * This project was developed with **Visual Studio Code** using HTML/Javascript/CSS
-* The images used was pulled from the data given by this API endpoint from giphy.com: https://api.giphy.com/v1/gifs/trending
+* The images used was pulled from the data given by this API endpoint from https://giphy.com:
+https://api.giphy.com/v1/gifs/trending
 * The background image was created personally through **Corel Draw x8**.
 
 ## Contribution Guidelines
@@ -63,3 +64,4 @@ Feel free to give feedback on any thoughts you have or if you have any issues wi
 
 * Project Repository: https://github.com/stuvun/giphyslider
 * Submit Issues: https://github.com/stuvun/giphyslider/issues
+* Deployed Site: https://stuvun.github.io/giphyslider/
