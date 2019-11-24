@@ -2,7 +2,7 @@ const buttons = document.querySelectorAll(".button");
 const giphyContainer = document.querySelector(".giphyGallery");
 const giphy = document.querySelectorAll(".image");
 
-let a = 98;
+let a = 0;
 let currentSlide = 1;
 
 const api_key = "SZTkBwjQYYYVremZV8DUaaETiwKktzF2";
